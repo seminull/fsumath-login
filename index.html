@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="src/css/main.css">
+</head>
+<body ng-app="Mathematics">
+
+    <div ng-controller="LoginController" ng-cloak layout="column" layout-fill layout-margin="100" style="margin-top:100px;">
+        <div class="login-panel md-whiteframe-10dp">
+        <md-toolbar class="md-warn md-hue-2">
+          <div class="md-toolbar-tools">
+            <h2 class="md-flex">Mathematics Secure Resource</h2>
+          </div>
+        </md-toolbar>
+        <div layout="row">
+          <div flex=33 hide-xs layout="column" layout-align="center center">
+              <div><img src="http://www.math.fsu.edu/res/img/fsumathseal_small_color_150.png"></div>
+          </div>
+          <div flex>
+          <md-content style="padding:30px;" md-theme="docs-dark">
+            <form name="loginForm">
+                <md-input-container class="md-block">
+                  <label>Username</label>
+                  <input ng-model="user.username">
+                </md-input-container>
+                <md-input-container class="md-block">
+                  <label>Password</label>
+                  <input ng-model="user.password" type="password">
+                </md-input-container>
+                <div layout="row">
+                  <span flex></span>
+                  <md-button class="md-primary">Forgot Password</md-button>
+                  <md-button class="md-raised md-warn md-hue-2">Login</md-button>
+                </div>
+            </form>
+          </md-content>
+        </div>
+    </div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<script src="src/app/app.js"></script>
+<script src="src/app/controllers/login.js"></script>
+</body>
+</html>
+

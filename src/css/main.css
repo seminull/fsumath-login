@@ -1,0 +1,14 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+html, body {
+    height: 100%;
+    overflow: none;
+}
+
+.login-panel {
+    width: 600px;
+    background-color: #FFF;
+    margin: 0px auto;
+}
