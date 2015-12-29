@@ -8,14 +8,14 @@
 <body ng-app="Mathematics">
 
   <div ng-controller="LoginController" ng-cloak layout="column" layout-fill>
-    <div class="login-panel md-whiteframe-10dp">
+    <div class="login-panel md-whiteframe-10dp" hide-xs>
       <md-toolbar class="md-warn md-hue-2">
         <div class="md-toolbar-tools">
           <h2 class="md-flex">Mathematics Secure Resource</h2>
         </div>
       </md-toolbar>
       <div layout="row">
-        <div flex=33 hide-xs layout="column" layout-align="center center">
+        <div flex=33 layout="column" layout-align="center center">
           <div><img src="http://www.math.fsu.edu/res/img/fsumathseal_small_color_150.png"></div>
         </div>
         <div flex>
@@ -36,6 +36,32 @@
                 </div>
             </form>
           </md-content>
+        </div>
+      </div>
+    </div>
+
+    <div hide show-xs layout="row" layout-fill layout-align="center center">
+      <div flex style="padding:20px">
+        <div layout="column" layout-align="center center">
+          <div style="text-align:center;"><img src="http://www.math.fsu.edu/res/img/mathematics_2015_text_50.png" width="95%"></div>
+          <div style="width:100%;">
+            <md-content style="padding:30px;">
+              <form name="loginForm">
+                <md-input-container class="md-block">
+                  <label>Username</label>
+                  <input ng-model="user.username">
+                </md-input-container>
+                <md-input-container class="md-block">
+                  <label>Password</label>
+                  <input ng-model="user.password" type="password">
+                </md-input-container>
+                <div layout="column" style="padding-top:30px;">
+                  <md-button class="md-raised md-warn md-hue-2">Login</md-button>
+                  <md-button class="md-primary">Forgot Password</md-button>
+                </div>
+              </form>
+            </md-content>
+          </div>
         </div>
       </div>
     </div>
