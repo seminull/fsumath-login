@@ -2,13 +2,35 @@
   display: none !important;
 }
 
+html {
+    background: url(http://www.math.fsu.edu/res/img/fsu_westcott_cover.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 html, body {
     height: 100%;
     overflow: none;
+    background-color: rgba(255,255,255,0) !important;
 }
 
 .login-panel {
     width: 600px;
     background-color: #FFF;
     margin: 100px auto;
+}
+
+input:-webkit-autofill {
+    background-color: rgb(66,66,66) !important;
+    -webkit-text-fill-color: #666 !important;
+    text-shadow: 0px 0px 0px !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
 }

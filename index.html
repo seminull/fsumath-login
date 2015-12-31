@@ -7,7 +7,7 @@
 </head>
 <body ng-app="Mathematics">
 
-  <div ng-controller="LoginController" ng-cloak layout="column" layout-fill>
+  <div ng-controller="LoginController" ng-cloak layout="column" layout-fill style="background:none;">
     <div class="login-panel md-whiteframe-10dp" hide-xs>
       <md-toolbar class="md-warn md-hue-2">
         <div class="md-toolbar-tools">
@@ -23,16 +23,16 @@
             <form name="loginForm">
                 <md-input-container class="md-block">
                   <label>Username</label>
-                  <input ng-model="user.username">
+                  <input ng-model="user.username" id="username">
                 </md-input-container>
-                <md-input-container class="md-block">
+                <md-input-container class="md-block" id="special">
                   <label>Password</label>
-                  <input ng-model="user.password" type="password">
+                  <input ng-model="user.password" type="password" id="password">
                 </md-input-container>
                 <div layout="row">
                   <span flex></span>
                   <md-button class="md-primary">Forgot Password</md-button>
-                  <md-button class="md-raised md-warn md-hue-2">Login</md-button>
+                  <md-button class="md-raised md-warn md-hue-2" ng-click="login()">Login</md-button>
                 </div>
             </form>
           </md-content>
@@ -42,10 +42,9 @@
 
     <div hide show-xs layout="row" layout-fill layout-align="center center">
       <div flex style="padding:20px">
-        <div layout="column" layout-align="center center">
-          <div style="text-align:center;"><img src="http://www.math.fsu.edu/res/img/mathematics_2015_text_50.png" width="95%"></div>
           <div style="width:100%;">
             <md-content style="padding:30px;">
+ <div style="text-align:center;"><img src="http://www.math.fsu.edu/res/img/mathematics_2015_text_50.png" width="95%"></div>
               <form name="loginForm">
                 <md-input-container class="md-block">
                   <label>Username</label>
@@ -55,8 +54,8 @@
                   <label>Password</label>
                   <input ng-model="user.password" type="password">
                 </md-input-container>
-                <div layout="column" style="padding-top:30px;">
-                  <md-button class="md-raised md-warn md-hue-2">Login</md-button>
+                <div layout="column">
+                  <md-button class="md-raised md-warn md-hue-2" ng-click="login()">Login</md-button>
                   <md-button class="md-primary">Forgot Password</md-button>
                 </div>
               </form>
@@ -71,8 +70,10 @@
 <script src="bower_components/angular-aria/angular-aria.js"></script>
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/angular-material/angular-material.js"></script>
+<script src="bower_components/autofill-event/src/autofill-event.js"></script>
 <script src="src/app/app.js"></script>
 <script src="src/app/controllers/login.js"></script>
+<script src="src/app/services/auth.js"></script>
 </body>
 </html>
 
