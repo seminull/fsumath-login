@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <link rel="stylesheet" href="src/css/main.css">
 </head>
@@ -11,7 +12,12 @@
     <div class="login-panel md-whiteframe-10dp" hide-xs>
       <md-toolbar class="md-warn md-hue-2">
         <div class="md-toolbar-tools">
+
           <h2 class="md-flex">Mathematics Secure Resource</h2>
+          <span flex></span>
+          <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+            <md-icon md-font-set="material-icons"> lock </md-icon>
+          </md-button>
         </div>
       </md-toolbar>
       <div layout="row">
@@ -76,4 +82,3 @@
 <script src="src/app/services/auth.js"></script>
 </body>
 </html>
-
